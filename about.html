@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About – Collabify</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">Collabify<span>.</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profile.html">Create Profile</a></li>
+      <li><a href="collaborators.html">Find Collaborators</a></li>
+      <li><a href="ideaboard.html">Idea Board</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+    </ul>
+    <a href="profile.html" class="btn-nav">Get Started</a>
+    <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+  </nav>
+
+  <div class="page-header">
+    <div class="section-tag">About</div>
+    <h1>About Collabify</h1>
+    <p>A student-built platform for global research collaboration, aligned with the UN Sustainable Development Goals.</p>
+  </div>
+
+  <section class="about-section">
+    <div class="container">
+
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>What is Collabify?</h2>
+          <p>Collabify is a Global Research Collaboration Finder — a web platform designed to connect students and researchers across disciplines and borders. Users can create research profiles, discover collaborators through smart keyword matching, and post research ideas to find project partners.</p>
+          <p>Built as an SDG mini-project, Collabify addresses real challenges in academic networking: researchers often struggle to find partners with complementary skills, especially across institutions and countries.</p>
+          <h2>Our Mission</h2>
+          <p>To democratize research collaboration by making it easy for any student or researcher — regardless of institution or geography — to find the right partner for their next big idea.</p>
+        </div>
+        <div class="about-sdg-panel">
+          <h3>SDG Alignment</h3>
+          <div class="sdg-mini-card"><span class="sdg-badge sdg4">SDG 4</span><span>Quality Education — enabling access to collaborative academic environments.</span></div>
+          <div class="sdg-mini-card"><span class="sdg-badge sdg9">SDG 9</span><span>Innovation — building digital tools that support research and development.</span></div>
+          <div class="sdg-mini-card"><span class="sdg-badge sdg17">SDG 17</span><span>Partnerships — creating cross-border academic alliances and networks.</span></div>
+        </div>
+      </div>
+
+      <div class="team-section">
+        <h2>Meet the Team</h2>
+        <p class="team-sub">Developed by second-year Information Technology students at AISSMS Institute of Information Technology, Pune.</p>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-avatar">SS</div>
+            <div class="team-name">Shravani Shah</div>
+            <div class="team-role">Second Year · IT</div>
+            <div class="team-college">AISSMS IOIT, Pune</div>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar">BS</div>
+            <div class="team-name">Bhumi Shinde</div>
+            <div class="team-role">Second Year · IT</div>
+            <div class="team-college">AISSMS IOIT, Pune</div>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar">BS</div>
+            <div class="team-name">Bushra Shaikh</div>
+            <div class="team-role">Second Year · IT</div>
+            <div class="team-college">AISSMS IOIT, Pune</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tech-section">
+        <h2>Technologies Used</h2>
+        <div class="tech-chips">
+          <div class="tech-chip"><i class="fab fa-html5"></i> HTML5</div>
+          <div class="tech-chip"><i class="fab fa-css3-alt"></i> CSS3</div>
+          <div class="tech-chip"><i class="fab fa-js"></i> JavaScript</div>
+          <div class="tech-chip"><i class="fas fa-database"></i> LocalStorage</div>
+          <div class="tech-chip"><i class="fas fa-code-branch"></i> VS Code</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="logo">Collabify<span>.</span></span>
+      <p>© 2024 Collabify · AISSMS Institute of Information Technology, Pune</p>
+      <p>An SDG-aligned academic collaboration platform.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

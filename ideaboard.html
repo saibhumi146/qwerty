@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Idea Board – Collabify</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">Collabify<span>.</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profile.html">Create Profile</a></li>
+      <li><a href="collaborators.html">Find Collaborators</a></li>
+      <li><a href="ideaboard.html" class="active">Idea Board</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="profile.html" class="btn-nav">Get Started</a>
+    <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+  </nav>
+
+  <div class="page-header">
+    <div class="section-tag">Ideas</div>
+    <h1>Research Idea Board</h1>
+    <p>Post your research idea and invite others to collaborate. Browse ideas and find projects to join.</p>
+  </div>
+
+  <section class="idea-section">
+    <div class="container">
+
+      <div class="idea-post-card">
+        <h3><i class="fas fa-lightbulb"></i> Post a New Research Idea</h3>
+        <div class="form-group">
+          <label>Idea Title</label>
+          <input type="text" id="idea-title" placeholder="e.g. AI model for early cancer detection"/>
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea id="idea-desc" rows="3" placeholder="Describe your research idea and what kind of collaborators you're looking for..."></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group half">
+            <label>Research Field</label>
+            <input type="text" id="idea-field" placeholder="e.g. AI, Biotechnology"/>
+          </div>
+          <div class="form-group half">
+            <label>Posted By</label>
+            <input type="text" id="idea-author" placeholder="Your name"/>
+          </div>
+        </div>
+        <button class="btn-primary" onclick="postIdea()"><i class="fas fa-paper-plane"></i> Post Idea</button>
+        <div id="idea-msg" class="profile-msg hidden"></div>
+      </div>
+
+      <div class="ideas-filter">
+        <input type="text" id="idea-search" placeholder="🔍  Search ideas by title, field or author..." oninput="filterIdeas()"/>
+      </div>
+
+      <div class="ideas-grid" id="ideas-grid"></div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="logo">Collabify<span>.</span></span>
+      <p>© 2024 Collabify · AISSMS Institute of Information Technology, Pune</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

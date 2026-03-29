@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collabify – Global Research Collaboration Finder</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">Collabify<span>.</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="profile.html">Create Profile</a></li>
+      <li><a href="collaborators.html">Find Collaborators</a></li>
+      <li><a href="ideaboard.html">Idea Board</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="profile.html" class="btn-nav">Get Started</a>
+    <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape1"></div>
+      <div class="shape shape2"></div>
+      <div class="shape shape3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge"><i class="fas fa-globe"></i> SDG-Aligned Platform</div>
+      <h1>Where Researchers <br/><span class="highlight">Connect & Collaborate</span></h1>
+      <p class="hero-sub">Collabify matches you with the right research partners based on your interests, skills, and goals — across disciplines and borders.</p>
+      <div class="hero-btns">
+        <a href="profile.html" class="btn-primary">Create Your Profile</a>
+        <a href="collaborators.html" class="btn-secondary">Find Collaborators</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Researchers</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">40+</span><span class="stat-label">Research Fields</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">30+</span><span class="stat-label">Countries</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="connection-card card-a">
+        <div class="cc-avatar" style="background:#d4eaff;">🧬</div>
+        <div class="cc-info"><strong>Aisha R.</strong><span>Bioinformatics · India</span></div>
+        <div class="match-pill">92% Match</div>
+      </div>
+      <div class="connection-card card-b">
+        <div class="cc-avatar" style="background:#e0f7e9;">🤖</div>
+        <div class="cc-info"><strong>Daniel M.</strong><span>AI Research · Germany</span></div>
+        <div class="match-pill">87% Match</div>
+      </div>
+      <div class="connection-card card-c">
+        <div class="cc-avatar" style="background:#fff3e0;">🌱</div>
+        <div class="cc-info"><strong>Priya K.</strong><span>Climate Science · Canada</span></div>
+        <div class="match-pill">79% Match</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SDG SECTION -->
+  <section class="sdg-section">
+    <div class="container">
+      <div class="section-tag">Our Purpose</div>
+      <h2 class="section-title">Aligned with Global Goals</h2>
+      <p class="section-sub">Collabify directly contributes to the UN Sustainable Development Goals by enabling knowledge sharing and research partnerships worldwide.</p>
+      <div class="sdg-cards">
+        <div class="sdg-card">
+          <div class="sdg-icon" style="background:#e8f5e9; color:#2e7d32;">📚</div>
+          <div class="sdg-num">SDG 4</div>
+          <h3>Quality Education</h3>
+          <p>Fostering academic growth and knowledge sharing among students and researchers globally.</p>
+        </div>
+        <div class="sdg-card">
+          <div class="sdg-icon" style="background:#e3f2fd; color:#1565c0;">🏗️</div>
+          <div class="sdg-num">SDG 9</div>
+          <h3>Innovation & Infrastructure</h3>
+          <p>Building digital infrastructure to support interdisciplinary innovation and research collaboration.</p>
+        </div>
+        <div class="sdg-card">
+          <div class="sdg-icon" style="background:#f3e5f5; color:#6a1b9a;">🤝</div>
+          <div class="sdg-num">SDG 17</div>
+          <h3>Partnerships for Goals</h3>
+          <p>Strengthening global partnerships through cross-border and cross-disciplinary research networks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section">
+    <div class="container">
+      <div class="section-tag">Process</div>
+      <h2 class="section-title">How Collabify Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-icon"><i class="fas fa-user-edit"></i></div>
+          <h3>Create Your Profile</h3>
+          <p>Enter your research interests, skills, field of study, and project ideas.</p>
+        </div>
+        <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-icon"><i class="fas fa-brain"></i></div>
+          <h3>Smart Matching</h3>
+          <p>Our keyword-based algorithm finds researchers with complementary interests and skills.</p>
+        </div>
+        <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-icon"><i class="fas fa-handshake"></i></div>
+          <h3>Collaborate</h3>
+          <p>Connect with your matches, post ideas, and start building research projects together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section class="topics-section">
+    <div class="container">
+      <div class="section-tag">Explore</div>
+      <h2 class="section-title">Research Topics</h2>
+      <div class="topics-grid">
+        <div class="topic-chip"><i class="fas fa-robot"></i> Artificial Intelligence</div>
+        <div class="topic-chip"><i class="fas fa-dna"></i> Biotechnology</div>
+        <div class="topic-chip"><i class="fas fa-leaf"></i> Climate Science</div>
+        <div class="topic-chip"><i class="fas fa-bolt"></i> Renewable Energy</div>
+        <div class="topic-chip"><i class="fas fa-heartbeat"></i> Healthcare</div>
+        <div class="topic-chip"><i class="fas fa-atom"></i> Quantum Computing</div>
+        <div class="topic-chip"><i class="fas fa-satellite"></i> Space Research</div>
+        <div class="topic-chip"><i class="fas fa-flask"></i> Nanotechnology</div>
+        <div class="topic-chip"><i class="fas fa-brain"></i> Neuroscience</div>
+        <div class="topic-chip"><i class="fas fa-shield-alt"></i> Cybersecurity</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to find your research partner?</h2>
+      <p>Join Collabify today and take your research to a global level.</p>
+      <a href="profile.html" class="btn-primary">Start Now — It's Free</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="logo">Collabify<span>.</span></span>
+      <p>© 2024 Collabify · AISSMS Institute of Information Technology, Pune</p>
+      <p>An SDG-aligned academic collaboration platform.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

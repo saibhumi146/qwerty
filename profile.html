@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Profile – Collabify</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">Collabify<span>.</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profile.html" class="active">Create Profile</a></li>
+      <li><a href="collaborators.html">Find Collaborators</a></li>
+      <li><a href="ideaboard.html">Idea Board</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="profile.html" class="btn-nav">Get Started</a>
+    <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+  </nav>
+
+  <div class="page-header">
+    <div class="section-tag">Step 1</div>
+    <h1>Create Your Research Profile</h1>
+    <p>Tell us about yourself so we can find the perfect research collaborators for you.</p>
+  </div>
+
+  <section class="profile-section">
+    <div class="profile-form-wrap">
+
+      <div class="form-card">
+        <div class="form-group">
+          <label><i class="fas fa-user"></i> Full Name</label>
+          <input type="text" id="name" placeholder="e.g. Shravani Shah"/>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-graduation-cap"></i> Field of Study</label>
+          <input type="text" id="field" placeholder="e.g. Computer Engineering, Biotechnology"/>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-university"></i> College / University</label>
+          <input type="text" id="college" placeholder="e.g. AISSMS Institute of Information Technology"/>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-globe"></i> Country</label>
+          <input type="text" id="country" placeholder="e.g. India"/>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-microscope"></i> Research Interests</label>
+          <input type="text" id="interests" placeholder="e.g. AI in Healthcare, Machine Learning, Climate Science"/>
+          <span class="hint">Separate with commas</span>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-tools"></i> Skills</label>
+          <input type="text" id="skills" placeholder="e.g. Python, Data Analysis, Research Writing"/>
+          <span class="hint">Separate with commas</span>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-lightbulb"></i> Project Idea <span style="font-weight:400;color:#9ca3af;">(optional)</span></label>
+          <textarea id="idea" rows="3" placeholder="e.g. AI model for early cancer detection using deep learning"></textarea>
+        </div>
+        <button class="btn-primary full-width" onclick="saveProfile()">
+          <i class="fas fa-save"></i> Save Profile & Find Matches
+        </button>
+        <div id="profile-msg" class="profile-msg hidden"></div>
+      </div>
+
+      <div class="profile-preview-wrap">
+        <h3>Profile Preview</h3>
+        <div class="profile-card" id="preview-card">
+          <div class="profile-avatar" id="prev-avatar">?</div>
+          <div class="profile-name" id="prev-name">Your Name</div>
+          <div class="profile-field" id="prev-field">Field of Study</div>
+          <div class="profile-college" id="prev-college">College / University</div>
+          <div class="profile-tags" id="prev-interests"></div>
+          <div class="profile-skills-wrap">
+            <span class="skills-label">Skills</span>
+            <div class="profile-tags skills-tags" id="prev-skills"></div>
+          </div>
+        </div>
+        <div class="preview-tip"><i class="fas fa-info-circle"></i> Your profile updates as you type!</div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="logo">Collabify<span>.</span></span>
+      <p>© 2024 Collabify · AISSMS Institute of Information Technology, Pune</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
