@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idea Board | Collabify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+    <a href="index.html" class="logo">Collabify<span>.</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="profile.html">Create Profile</a></li>
+      <li><a href="collaborators.html">Find Collaborators</a></li>
+      <li><a href="ideaboard.html">Idea Board</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="profile.html" class="btn-nav">Get Started</a>
+    <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+  </nav>
+
+    <main class="container">
+        <header style="text-align: center; margin: 40px 0;">
+            <h1><i class="fas fa-lightbulb"></i> Emerging SDG Idea Board</h1>
+            <p>Share your vision or join an existing research mission.</p>
+        </header>
+
+        <section class="form-card">
+            <div class="form-header">
+                <h3>Submit a Research Proposal</h3>
+            </div>
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>Idea Title</label>
+                    <input type="text" id="idea-title" placeholder="e.g., Solar-Powered Desalination">
+                </div>
+                <div class="input-group">
+                    <label>SDG Category</label>
+                    <input type="text" id="idea-field" placeholder="e.g., SDG 6: Clean Water">
+                </div>
+                <div class="input-group" style="grid-column: span 2;">
+                    <label>Your Full Name</label>
+                    <input type="text" id="posted-by" placeholder="Must match your profile name exactly">
+                </div>
+                <div class="input-group" style="grid-column: span 2;">
+                    <label>Description & Partner Requirements</label>
+                    <textarea id="idea-desc" rows="4" placeholder="What is your goal? What skills should your collaborator have?"></textarea>
+                </div>
+                <button onclick="postIdea()" class="btn-primary" style="grid-column: span 2;">
+                    <i class="fas fa-paper-plane"></i> Publish to Board
+                </button>
+            </div>
+        </section>
+
+        <div class="board-header">
+            <h2>Current Research Proposals</h2>
+            <div class="search-bar" style="max-width: 300px;">
+                <i class="fas fa-search"></i>
+                <input type="text" id="idea-search" placeholder="Filter ideas..." onkeyup="filterIdeas()">
+            </div>
+        </div>
+
+        <div id="idea-board-grid" class="idea-grid"></div>
+    </main>
+
+    <div id="resume-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="resume-header">
+                    <div id="res-avatar" class="res-avatar"></div>
+                    <h2 id="res-name">Connect with Researcher</h2>
+                    <p id="res-field" class="res-field"></p>
+                </div>
+                <div class="resume-info">
+                    <p><strong><i class="fas fa-university"></i> Institution:</strong> <span id="res-college"></span></p>
+                    <p><strong><i class="fas fa-globe"></i> Country:</strong> <span id="res-country"></span></p>
+                </div>
+                <div class="resume-section">
+                    <h4 id="mission-title">Sustainable Mission</h4>
+                    <p id="res-idea"></p>
+                </div>
+                <div class="resume-section">
+                    <h4>Expertise</h4>
+                    <div id="res-skills" class="tag-container"></div>
+                </div>
+                <button class="btn-primary" onclick="sendRequest()" style="width: 100%; margin-top: 20px;">Send Connection Request</button>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="app.js"></script>
+
+    <div id="resume-modal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="resume-header">
+            <div id="res-avatar" class="res-avatar"></div>
+            <h2 id="res-name"></h2>
+            <p id="res-field"></p>
+        </div>
+        <p><strong>University:</strong> <span id="res-college"></span></p>
+        <button class="btn-primary" onclick="sendRequest()" style="width:100%; margin-top:15px;">
+    Send Connection Request
+</button>
+    </div>
+</div>
+    <div id="toast-container" class="toast-container"></div>
+</body>
+</html>
