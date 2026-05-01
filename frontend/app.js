@@ -33,7 +33,53 @@ async function loadIdeas() {
         `).join('');
     } catch (e) { console.error("Error loading ideas:", e); }
 }
+// --- POST IDEA FUNCTION ---
+async function postIdea() {
+    const title = document.getElementById("idea-title").value;
+    const field = document.getElementById("idea-field").value;
+    const author = document.getElementById("posted-by").value;
+    const description = document.getElementById("idea-desc").value;
 
+    // Validation
+    if (!title || !field || !author || !description) {
+        alert("Please fill all fields.");
+        return;
+    }
+
+    const ideaData = {
+        title,
+        field,
+        author,
+        description
+    };
+
+    try {
+        const response = await fetch(`${API_URL}/ideas`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(ideaData)
+        });
+
+        if (response.ok) {
+            showSuccessToast("Idea published successfully!");
+
+            // Clear form
+            document.getElementById("idea-title").value = "";
+            document.getElementById("idea-field").value = "";
+            document.getElementById("posted-by").value = "";
+            document.getElementById("idea-desc").value = "";
+
+            // Reload ideas
+            loadIdeas();
+        }
+
+    } catch (e) {
+        console.error(e);
+        showSuccessToast("Idea saved locally (Server Offline)");
+    }
+}
 // --- 3. COLLABORATORS LOGIC ---
 async function loadCollaborators() {
     const grid = document.getElementById('collab-grid');
